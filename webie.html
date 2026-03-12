@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Question</title>
+
+<style>
+body{
+    text-align:center;
+    font-family: Arial;
+    margin-top:100px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    margin:10px;
+    cursor:pointer;
+}
+
+#noBtn{
+    position:absolute;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Marah lagi ke?</h1>
+
+<button onclick="showLove()">Tak</button>
+<button id="noBtn" onmouseover="moveButton()">A'ah</button>
+
+<p id="message"></p>
+
+<script>
+function showLove(){
+    document.getElementById("message").innerHTML = ">,< aku rasa cam nak original pudding family mart la";
+}
+
+function moveButton(){
+    var button = document.getElementById("noBtn");
+
+    var x = Math.floor(Math.random() * window.innerWidth);
+    var y = Math.floor(Math.random() * window.innerHeight);
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
